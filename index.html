@@ -1,0 +1,107 @@
+html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de controle de equipamentos para navios da Marinha">
+    <meta name="author" content="Marinha do Brasil">
+    
+    <!-- Favicon - IMPORTANTE: Você precisa criar/baixar um -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/images/logo.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <title>Controle de Equipamentos - NAM ATLÂNTICO</title>
+</head>
+<body>
+    <div class="container">
+        <header class="secao">
+            <div class="cabecalho">
+                <div class="logo-titulo">
+                    <!-- Substitua por uma imagem real -->
+                    <img src="assets/images/logo.png" 
+                         alt="Brasão do Navio NAM ATLÂNTICO" 
+                         class="brasao-navio"
+                         id="brasaoNavio">
+                    <div class="titulo-principal">
+                        <h1>Controle de Equipamentos</h1>
+                        <div class="subtitulo" id="nomeNavio">NAM ATLÂNTICO - A140</div>
+                    </div>
+                </div>
+                <div class="controles-data">
+                    <label for="dataSelecionada">Data do Controle:</label>
+                    <input type="date" id="dataSelecionada" name="dataSelecionada">
+                    <span class="data-atual" id="dataExibicao"></span>
+                </div>
+            </div>
+        </header>
+
+        <section class="secao">
+            <h3>Status dos Equipamentos</h3>
+            <div class="equipamentos-grid" id="equipamentos">
+                <!-- Botões gerados via JavaScript -->
+            </div>
+            <div class="contador-estados" id="contadorEstados"></div>
+        </section>
+
+        <section class="secao">
+            <h3>Legenda de Status</h3>
+            <div class="legenda-container">
+                <div class="legenda-item">
+                    <div class="cor-legenda" style="background-color: #4CAF50;"></div>
+                    <span>Equipamento na linha</span>
+                </div>
+                <div class="legenda-item">
+                    <div class="cor-legenda" style="background-color: #2196F3;"></div>
+                    <span>Equipamento de Serviço</span>
+                </div>
+                <div class="legenda-item">
+                    <div class="cor-legenda" style="background-color: #ffcc00;"></div>
+                    <span>Operando com Restrição</span>
+                </div>
+                <div class="legenda-item">
+                    <div class="cor-legenda" style="background-color: #f0f0f0;"></div>
+                    <span>Equipamento disponível</span>
+                </div>
+                <div class="legenda-item">
+                    <div class="cor-legenda" style="background-color: #f44336;"></div>
+                    <span>Equipamento indisponível</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao">
+            <h3>Carga Líquida</h3>
+            <div class="combustiveis-container">
+                <div class="combustivel-item">
+                    <label for="agua">Aguada:</label>
+                    <input type="number" value="555" step="0.001" min="0" id="agua">
+                    <span class="unidade">m³</span>
+                </div>
+                <div class="combustivel-item">
+                    <label for="oleo_lub">Óleo lub:</label>
+                    <input type="number" value="98" step="0.001" min="0" id="oleo_lub">
+                    <span class="unidade">m³</span>
+                </div>
+                <div class="combustivel-item">
+                    <label for="oleo_comb">Óleo comb:</label>
+                    <input type="number" value="100" step="0.001" min="0" id="oleo_comb">
+                    <span class="unidade">m³</span>
+                </div>
+                <div class="combustivel-item">
+                    <label for="jp5">JP5:</label>
+                    <input type="number" value="150" step="0.001" min="0" id="jp5">
+                    <span class="unidade">m³</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
