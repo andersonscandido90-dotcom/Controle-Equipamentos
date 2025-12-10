@@ -1,4 +1,4 @@
-css
+
 /* styles/main.css */
 :root {
     --cor-verde: #4CAF50;
@@ -238,4 +238,5 @@ h1, h3 {
 
 .secao {
     animation: fadeIn 0.3s ease-out;
+
 }
