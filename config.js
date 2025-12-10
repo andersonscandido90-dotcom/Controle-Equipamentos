@@ -1,5 +1,4 @@
-javascript
-// js/config.js
+
 const CONFIG = {
     estados: [
         { classe: "verde", texto: "Na linha", cor: "#4CAF50" },
@@ -38,4 +37,5 @@ const CONFIG = {
         nome: "NAM ATLÂNTICO - A140",
         brasao: "assets/images/logo.png"
     }
+
 };
